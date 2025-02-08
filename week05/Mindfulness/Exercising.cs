@@ -10,7 +10,7 @@ class ExercisingActivity : Activity
         "Going for walk.",
         "Take your dog for a walk.",
         "Take a book to read at a park.",
-        "Bird watching."
+        "Bird watching.",
         "Take your journal on a walk."
     };
 

@@ -28,16 +28,21 @@ class ReflectingActivity : Activity
 
     public ReflectingActivity() : base("Reflecting", "This activity helps you reflect on moments of strength and resilience.") { }
 
-    public void Run()
+     public void Run()
     {
         DisplayStartingMessage();
         Console.WriteLine(GetRandomPrompt());
         ShowSpinner(3);
+        Console.WriteLine("Press Enter when you have something in mind and wish to continue...");
+        ShowSpinner(3);
+        Console.ReadLine();
         int elapsed = 0;
         while (elapsed < _duration)
         {
             Console.WriteLine(GetRandomQuestion());
+            Console.WriteLine("Press Enter when ready...");
             ShowSpinner(5);
+            Console.ReadLine();
             elapsed += 5;
         }
         DisplayEndingMessage();

@@ -1,0 +1,4 @@
+0
+Simple,Attend Temple Saturday,Do 5 baptisms,20,False
+Eternal,Read the scriptures for 10 min,Read 10 min every morning,20
+Checklist,Pray,Pray every night,20,0,5,200

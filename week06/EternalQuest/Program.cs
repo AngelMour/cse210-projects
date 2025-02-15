@@ -6,7 +6,7 @@ class Program
 {
     private List<Goal> _goals = new List<Goal>();
     private int _score = 0;
-
+//add a Start method to display the menu
     public void Start()
     {
         while (true)
@@ -17,7 +17,7 @@ class Program
             Console.WriteLine("4. Load Goals");
             Console.WriteLine("5. Record Events");
             Console.WriteLine("6. Quit");
-
+//add a switch statement to handle the user's choice
             string choice = Console.ReadLine();
             switch (choice)
             {
@@ -30,7 +30,7 @@ class Program
             }
         }
     }
-
+//add a method to create a goal
     private void CreateGoal()
     {
         Console.WriteLine("1. Simple Goal\n2. Eternal Goal\n3. Checklist Goal");
@@ -42,7 +42,7 @@ class Program
         string description = Console.ReadLine();
         Console.Write("Enter points: ");
         int points = int.Parse(Console.ReadLine());
-
+//add a switch statement to create the appropriate goal based on the user's choice
         switch (choice)
         {
             case "1": _goals.Add(new SimpleGoal(name, description, points)); break;
@@ -64,7 +64,7 @@ class Program
             Console.WriteLine(goal.GetDetailString());
         }
     }
-
+//add a method to record an event
     private void RecordEvent()
     {
         Console.WriteLine("Select goal to record event:");
@@ -77,7 +77,7 @@ class Program
         _goals[index].RecordEvent(ref _score);
         Console.WriteLine("Congratulations!! ");
     }
-
+//add a method to save the goals to a file
     private void SaveGoals()
     {
         using (StreamWriter writer = new StreamWriter("goals.txt"))
@@ -89,7 +89,7 @@ class Program
             }
         }
     }
-
+//add a method to load the goals from the file
     private void LoadGoals()
     {
         if (File.Exists("goals.txt"))

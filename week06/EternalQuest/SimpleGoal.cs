@@ -10,7 +10,7 @@ class SimpleGoal : Goal
     {
         _isComplete = false;
     }
-
+//overwrite the RecordEvent method to add the points to the score if the goal has not been completed
     public override void RecordEvent(ref int score)
     {
         if (!_isComplete)
@@ -19,7 +19,7 @@ class SimpleGoal : Goal
             score += _points;
         }
     }
-
+//overwrite the IsComplete method to return the value of the _isComplete field
     public override bool IsComplete() => _isComplete;
     public override string GetDetailString() => $"[{(_isComplete ? "X" : " ")}] {_shortName} - {_description}";
     public override string GetRepresentation() => $"Simple,{_shortName},{_description},{_points},{_isComplete}";

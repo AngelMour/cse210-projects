@@ -26,7 +26,7 @@ class CheckListGoal : Goal
                 score += _bonus;
         }
     }
-
+//overwrite the IsComplete method to return true if the amount completed is equal to the target
     public override bool IsComplete() => _amountCompleted >= _target;
     public override string GetDetailString() => $"[{_amountCompleted}/{_target}] {_shortName} - {_description}";
     public override string GetRepresentation() => $"Checklist,{_shortName},{_description},{_points},{_amountCompleted},{_target},{_bonus}";

@@ -13,6 +13,7 @@ class EternalGoal : Goal
         score += _points;
     }
 
+//owerwrite the IsComplete method to return false
     public override bool IsComplete() => false;
     public override string GetDetailString() => $"[∞] {_shortName} - {_description}";
     public override string GetRepresentation() => $"Eternal,{_shortName},{_description},{_points}";
